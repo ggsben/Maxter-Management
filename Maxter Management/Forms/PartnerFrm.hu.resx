@@ -1,0 +1,56 @@
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Új Partner</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>Mégse</value>
+  </data>
+  <data name="button3.Text" xml:space="preserve">
+    <value>Szerkeszt</value>
+  </data>
+  <data name="button4.Text" xml:space="preserve">
+    <value>Szerkeszt</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Azonosítási info</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Kapcsolat</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Név:</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Adószám:</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Számlázási cím:</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Szállítási cím:</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>E-mail cím:</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Telefonszám:</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Ár kategória:</value>
+  </data>
+</root>
