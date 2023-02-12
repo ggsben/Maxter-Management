@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MaxterDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="Address_ID" />
+          </Key>
+          <Property Name="street_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="street_type" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="house_nr" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="block" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="entrance" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="floor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="door" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="city" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="postcode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="country" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="district" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EAN">
+          <Key>
+            <PropertyRef Name="EAN_id" />
+          </Key>
+          <Property Name="EAN_id" Type="int" Nullable="false" />
+          <Property Name="EAN" Type="nvarchar" MaxLength="50" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="SKU" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="Order_id" />
+          </Key>
+          <Property Name="Order_id" Type="int" Nullable="false" />
+          <Property Name="Partner_id" Type="int" Nullable="false" />
+          <Property Name="Order_date" Type="datetime" Nullable="false" />
+          <Property Name="Required_date" Type="datetime" Nullable="false" />
+          <Property Name="Shipped_date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Order_detail">
+          <Key>
+            <PropertyRef Name="Order_Detail_id" />
+          </Key>
+          <Property Name="Order_Detail_id" Type="int" Nullable="false" />
+          <Property Name="Order_id" Type="int" Nullable="false" />
+          <Property Name="SKU" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Item_Price" Type="money" />
+          <Property Name="Ordered_Quantity" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Partners">
+          <Key>
+            <PropertyRef Name="Partner_id" />
+          </Key>
+          <Property Name="TIN" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Partner_id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Invoice_Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Shipping_Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price_Category" Type="tinyint" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Price">
+          <Key>
+            <PropertyRef Name="Price_id" />
+          </Key>
+          <Property Name="SKU" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Price_id" Type="int" Nullable="false" />
+          <Property Name="Price" Type="money" />
+          <Property Name="Price_Category" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="SKU" />
+          </Key>
+          <Property Name="SKU" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="VTSZ" Type="nvarchar" MaxLength="50" />
+          <Property Name="Stock_Quantity" Type="smallint" />
+          <Property Name="Min_Stock_Quantity" Type="smallint" />
+          <Property Name="PU" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_Address_PartnerInvoice' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_Address_PartnerInvoice" />-->
+        <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_Address_PartnerShipping' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_Address_PartnerShipping" />-->
+        <Association Name="FK_EAN_Product">
+          <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
+          <End Role="EAN" Type="Self.EAN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="SKU" />
+            </Principal>
+            <Dependent Role="EAN">
+              <PropertyRef Name="SKU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_detail_Order">
+          <End Role="Order" Type="Self.Order" Multiplicity="1" />
+          <End Role="Order_detail" Type="Self.Order_detail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="Order_id" />
+            </Principal>
+            <Dependent Role="Order_detail">
+              <PropertyRef Name="Order_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_detail_Product">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="Order_detail" Type="Self.Order_detail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="SKU" />
+            </Principal>
+            <Dependent Role="Order_detail">
+              <PropertyRef Name="SKU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_Partners">
+          <End Role="Partners" Type="Self.Partners" Multiplicity="1" />
+          <End Role="Order" Type="Self.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Partners">
+              <PropertyRef Name="Partner_id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="Partner_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Price_Product">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="Price" Type="Self.Price" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="SKU" />
+            </Principal>
+            <Dependent Role="Price">
+              <PropertyRef Name="SKU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MaxterDBModelStoreContainer">
+          <EntitySet Name="Address" EntityType="Self.Address" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EAN" EntityType="Self.EAN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Order_detail" EntityType="Self.Order_detail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Partners" EntityType="Self.Partners" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Price" EntityType="Self.Price" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_EAN_Product" Association="Self.FK_EAN_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="EAN" EntitySet="EAN" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_detail_Order" Association="Self.FK_Order_detail_Order">
+            <End Role="Order" EntitySet="Order" />
+            <End Role="Order_detail" EntitySet="Order_detail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_detail_Product" Association="Self.FK_Order_detail_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="Order_detail" EntitySet="Order_detail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_Partners" Association="Self.FK_Order_Partners">
+            <End Role="Partners" EntitySet="Partners" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Price_Product" Association="Self.FK_Price_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="Price" EntitySet="Price" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MaxterDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="Address_ID" />
+          </Key>
+          <Property Name="street_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="street_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="house_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="block" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="entrance" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="floor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="door" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="postcode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="district" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Address_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EAN">
+          <Key>
+            <PropertyRef Name="EAN_id" />
+          </Key>
+          <Property Name="EAN_id" Type="Int32" Nullable="false" />
+          <Property Name="EAN1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="SKU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Product" Relationship="Self.FK_EAN_Product" FromRole="EAN" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="Order_id" />
+          </Key>
+          <Property Name="Order_id" Type="Int32" Nullable="false" />
+          <Property Name="Partner_id" Type="Int32" Nullable="false" />
+          <Property Name="Order_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Required_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Shipped_date" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Order_detail" Relationship="Self.FK_Order_detail_Order" FromRole="Order" ToRole="Order_detail" />
+          <NavigationProperty Name="Partner" Relationship="Self.FK_Order_Partners" FromRole="Order" ToRole="Partners" />
+        </EntityType>
+        <EntityType Name="Order_detail">
+          <Key>
+            <PropertyRef Name="Order_Detail_id" />
+          </Key>
+          <Property Name="Order_Detail_id" Type="Int32" Nullable="false" />
+          <Property Name="Order_id" Type="Int32" Nullable="false" />
+          <Property Name="SKU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Item_Price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Ordered_Quantity" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Order" Relationship="Self.FK_Order_detail_Order" FromRole="Order_detail" ToRole="Order" />
+          <NavigationProperty Name="Product" Relationship="Self.FK_Order_detail_Product" FromRole="Order_detail" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="Partner">
+          <Key>
+            <PropertyRef Name="Partner_id" />
+          </Key>
+          <Property Name="TIN" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Partner_id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Invoice_Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Shipping_Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price_Category" Type="Byte" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Telephone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Orders" Relationship="Self.FK_Order_Partners" FromRole="Partners" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="Price">
+          <Key>
+            <PropertyRef Name="Price_id" />
+          </Key>
+          <Property Name="SKU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Price_id" Type="Int32" Nullable="false" />
+          <Property Name="Price1" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Price_Category" Type="Byte" />
+          <NavigationProperty Name="Product" Relationship="Self.FK_Price_Product" FromRole="Price" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="SKU" />
+          </Key>
+          <Property Name="SKU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VTSZ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Stock_Quantity" Type="Int16" />
+          <Property Name="Min_Stock_Quantity" Type="Int16" />
+          <Property Name="PU" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="EANs" Relationship="Self.FK_EAN_Product" FromRole="Product" ToRole="EAN" />
+          <NavigationProperty Name="Order_detail" Relationship="Self.FK_Order_detail_Product" FromRole="Product" ToRole="Order_detail" />
+          <NavigationProperty Name="Prices" Relationship="Self.FK_Price_Product" FromRole="Product" ToRole="Price" />
+        </EntityType>
+        <Association Name="FK_EAN_Product">
+          <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
+          <End Role="EAN" Type="Self.EAN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="SKU" />
+            </Principal>
+            <Dependent Role="EAN">
+              <PropertyRef Name="SKU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_detail_Order">
+          <End Role="Order" Type="Self.Order" Multiplicity="1" />
+          <End Role="Order_detail" Type="Self.Order_detail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="Order_id" />
+            </Principal>
+            <Dependent Role="Order_detail">
+              <PropertyRef Name="Order_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_Partners">
+          <End Role="Partners" Type="Self.Partner" Multiplicity="1" />
+          <End Role="Order" Type="Self.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Partners">
+              <PropertyRef Name="Partner_id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="Partner_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_detail_Product">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="Order_detail" Type="Self.Order_detail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="SKU" />
+            </Principal>
+            <Dependent Role="Order_detail">
+              <PropertyRef Name="SKU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Price_Product">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="Price" Type="Self.Price" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="SKU" />
+            </Principal>
+            <Dependent Role="Price">
+              <PropertyRef Name="SKU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MaxterDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Addresses" EntityType="Self.Address" />
+          <EntitySet Name="EANs" EntityType="Self.EAN" />
+          <EntitySet Name="Orders" EntityType="Self.Order" />
+          <EntitySet Name="Order_detail" EntityType="Self.Order_detail" />
+          <EntitySet Name="Partners" EntityType="Self.Partner" />
+          <EntitySet Name="Prices" EntityType="Self.Price" />
+          <EntitySet Name="Products" EntityType="Self.Product" />
+          <AssociationSet Name="FK_EAN_Product" Association="Self.FK_EAN_Product">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="EAN" EntitySet="EANs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_detail_Order" Association="Self.FK_Order_detail_Order">
+            <End Role="Order" EntitySet="Orders" />
+            <End Role="Order_detail" EntitySet="Order_detail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_Partners" Association="Self.FK_Order_Partners">
+            <End Role="Partners" EntitySet="Partners" />
+            <End Role="Order" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_detail_Product" Association="Self.FK_Order_detail_Product">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="Order_detail" EntitySet="Order_detail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Price_Product" Association="Self.FK_Price_Product">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="Price" EntitySet="Prices" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MaxterDBModelStoreContainer" CdmEntityContainer="MaxterDBEntities">
+          <EntitySetMapping Name="Addresses">
+            <EntityTypeMapping TypeName="MaxterDBModel.Address">
+              <MappingFragment StoreEntitySet="Address">
+                <ScalarProperty Name="street_name" ColumnName="street_name" />
+                <ScalarProperty Name="street_type" ColumnName="street_type" />
+                <ScalarProperty Name="house_nr" ColumnName="house_nr" />
+                <ScalarProperty Name="block" ColumnName="block" />
+                <ScalarProperty Name="entrance" ColumnName="entrance" />
+                <ScalarProperty Name="floor" ColumnName="floor" />
+                <ScalarProperty Name="door" ColumnName="door" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="postcode" ColumnName="postcode" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="district" ColumnName="district" />
+                <ScalarProperty Name="Address_ID" ColumnName="Address_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EANs">
+            <EntityTypeMapping TypeName="MaxterDBModel.EAN">
+              <MappingFragment StoreEntitySet="EAN">
+                <ScalarProperty Name="EAN_id" ColumnName="EAN_id" />
+                <ScalarProperty Name="EAN1" ColumnName="EAN" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="SKU" ColumnName="SKU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="MaxterDBModel.Order">
+              <MappingFragment StoreEntitySet="Order">
+                <ScalarProperty Name="Order_id" ColumnName="Order_id" />
+                <ScalarProperty Name="Partner_id" ColumnName="Partner_id" />
+                <ScalarProperty Name="Order_date" ColumnName="Order_date" />
+                <ScalarProperty Name="Required_date" ColumnName="Required_date" />
+                <ScalarProperty Name="Shipped_date" ColumnName="Shipped_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Order_detail">
+            <EntityTypeMapping TypeName="MaxterDBModel.Order_detail">
+              <MappingFragment StoreEntitySet="Order_detail">
+                <ScalarProperty Name="Order_Detail_id" ColumnName="Order_Detail_id" />
+                <ScalarProperty Name="Order_id" ColumnName="Order_id" />
+                <ScalarProperty Name="SKU" ColumnName="SKU" />
+                <ScalarProperty Name="Item_Price" ColumnName="Item_Price" />
+                <ScalarProperty Name="Ordered_Quantity" ColumnName="Ordered_Quantity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Partners">
+            <EntityTypeMapping TypeName="MaxterDBModel.Partner">
+              <MappingFragment StoreEntitySet="Partners">
+                <ScalarProperty Name="TIN" ColumnName="TIN" />
+                <ScalarProperty Name="Partner_id" ColumnName="Partner_id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Invoice_Address" ColumnName="Invoice_Address" />
+                <ScalarProperty Name="Shipping_Address" ColumnName="Shipping_Address" />
+                <ScalarProperty Name="Price_Category" ColumnName="Price_Category" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Prices">
+            <EntityTypeMapping TypeName="MaxterDBModel.Price">
+              <MappingFragment StoreEntitySet="Price">
+                <ScalarProperty Name="SKU" ColumnName="SKU" />
+                <ScalarProperty Name="Price_id" ColumnName="Price_id" />
+                <ScalarProperty Name="Price1" ColumnName="Price" />
+                <ScalarProperty Name="Price_Category" ColumnName="Price_Category" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="MaxterDBModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="SKU" ColumnName="SKU" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="VTSZ" ColumnName="VTSZ" />
+                <ScalarProperty Name="Stock_Quantity" ColumnName="Stock_Quantity" />
+                <ScalarProperty Name="Min_Stock_Quantity" ColumnName="Min_Stock_Quantity" />
+                <ScalarProperty Name="PU" ColumnName="PU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

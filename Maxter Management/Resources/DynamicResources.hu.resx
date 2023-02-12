@@ -1,0 +1,350 @@
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MenuFunctions_Billing_Click_Close" xml:space="preserve">
+    <value>Bezárás</value>
+  </data>
+  <data name="MenuFunctions_Billing_Click_Create_invoice" xml:space="preserve">
+    <value>Számla készítése</value>
+  </data>
+  <data name="MenuFunctions_Billing_Click_Download_invoices" xml:space="preserve">
+    <value>Számlák letöltése</value>
+  </data>
+  <data name="MenuFunctions_Billing_Click_Load_invoices" xml:space="preserve">
+    <value>Számlák megjelenítése</value>
+  </data>
+  <data name="MenuFunctions_LoadInvoices_Click_Invoices_are_not_downloaded__Please_download_invoices_first_" xml:space="preserve">
+    <value>Nincsenek letöltött számlák. Kérjük, töltse le elöbb őket.</value>
+  </data>
+  <data name="MenuFunctions_LoadInvoices_Click_Warning" xml:space="preserve">
+    <value>Figyelmeztetés</value>
+  </data>
+  <data name="MenuFunctions_Login_Error" xml:space="preserve">
+    <value>Hiba</value>
+  </data>
+  <data name="MenuFunctions_Login_Failed_login_" xml:space="preserve">
+    <value>Sikertelen bejelentkezés!</value>
+  </data>
+  <data name="MenuFunctions_ModifyOrder_Click_Order_ID__" xml:space="preserve">
+    <value>Rendelés ID: </value>
+  </data>
+  <data name="MenuFunctions_ModifyOrder_Click_Partner__" xml:space="preserve">
+    <value>Partner: </value>
+  </data>
+  <data name="MenuFunctions_OrderDgv_CellEndEdit_Requested_amount_exceeds_current_stock__Avaiable_stock___0_" xml:space="preserve">
+    <value>A kért mennyíség meghaladja a készletet! Készlet: {0}</value>
+  </data>
+  <data name="MenuFunctions_OrderDgv_Desc_" xml:space="preserve">
+    <value>Leírás</value>
+  </data>
+  <data name="MenuFunctions_OrderDgv_KeyDown_Delete_selected_item_" xml:space="preserve">
+    <value>Törli a kiválaszott elemet?</value>
+  </data>
+  <data name="MenuFunctions_OrderDgv_Price_" xml:space="preserve">
+    <value>Ár</value>
+  </data>
+  <data name="MenuFunctions_OrderDgv_Pu_" xml:space="preserve">
+    <value>Cs. E.:</value>
+  </data>
+  <data name="MenuFunctions_OrderDgv_Qty_" xml:space="preserve">
+    <value>Mennyíség:</value>
+  </data>
+  <data name="MenuFunctions_OrderDgv_Sku_" xml:space="preserve">
+    <value>Cikkszám</value>
+  </data>
+  <data name="MenuFunctions_Orders_Click_Create_order" xml:space="preserve">
+    <value>Rendelés létrehozása</value>
+  </data>
+  <data name="MenuFunctions_Orders_Click_Fill_stock" xml:space="preserve">
+    <value>Készlet feltöltés</value>
+  </data>
+  <data name="MenuFunctions_Orders_Click_Mark_as_shipped" xml:space="preserve">
+    <value>Megjelölés szállítottként</value>
+  </data>
+  <data name="MenuFunctions_Orders_Click_Modify_order" xml:space="preserve">
+    <value>Rendelés szerkesztése</value>
+  </data>
+  <data name="MenuFunctions_Orders_Click_Remove_order" xml:space="preserve">
+    <value>Rendelés törlése</value>
+  </data>
+  <data name="MenuFunctions_PartnerMenu_Create_partner" xml:space="preserve">
+    <value>Partner hozzáadása</value>
+  </data>
+  <data name="MenuFunctions_PartnerMenu_Modify_partner" xml:space="preserve">
+    <value>Partner szerkesztése</value>
+  </data>
+  <data name="MenuFunctions_PartnerMenu_Remove_partner" xml:space="preserve">
+    <value>Partner törlése</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Add_EAN" xml:space="preserve">
+    <value>EAN hozzáadása</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Add_Price" xml:space="preserve">
+    <value>Ár hozzáadása</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Create_new_record" xml:space="preserve">
+    <value>Új rekord létrehozása</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Modify_EAN" xml:space="preserve">
+    <value>EAN szerkesztése</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Modify_Price" xml:space="preserve">
+    <value>Ár szerkesztése</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Modify_record" xml:space="preserve">
+    <value>Rekord szerkesztése</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Orders_including_item" xml:space="preserve">
+    <value>Terméket tartalmazó rendelések</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Prices" xml:space="preserve">
+    <value>Árak</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Properties" xml:space="preserve">
+    <value>Tulajdonságok</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Remove_EAN" xml:space="preserve">
+    <value>EAN törlése</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Remove_Price" xml:space="preserve">
+    <value>Ár törlése</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Remove_record" xml:space="preserve">
+    <value>Rekord törlése</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Show_EANs" xml:space="preserve">
+    <value>EAN-ok megjelenítése</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Show_orders_including_item" xml:space="preserve">
+    <value>Terméket tartalmazó rendelések megjelenítése</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Show_Prices" xml:space="preserve">
+    <value>Árak megjelenítése</value>
+  </data>
+  <data name="MenuFunctions_RemoveEAN_Are_you_sure_you_want_to_delete_the_selected_EAN_" xml:space="preserve">
+    <value>Biztosan törölni kívánja a kiválasztott EAN-t?</value>
+  </data>
+  <data name="MenuFunctions_RemoveOrder_Click_Are_you_sure_you_want_to_delete_the_selected_Order_" xml:space="preserve">
+    <value>Biztosan törölni kívánja a kiválasztott rendelést?</value>
+  </data>
+  <data name="MenuFunctions_RemoveOrder_Click_Delete" xml:space="preserve">
+    <value>Törlés</value>
+  </data>
+  <data name="MenuFunctions_RemoveOrder_Click_Order_has_already_been_shipped_" xml:space="preserve">
+    <value>A rendelés már szállítva lett!</value>
+  </data>
+  <data name="MenuFunctions_RemovePartner_Click_Are_you_sure_you_want_to_delete_the_selected_Partner_" xml:space="preserve">
+    <value>Biztosan törölni kívánja a kiválasztott partnert?</value>
+  </data>
+  <data name="MenuFunctions_RemovePrice_Are_you_sure_you_want_to_delete_the_selected_Price_" xml:space="preserve">
+    <value>Biztosan törölni kívánja a kiválasztott árat?</value>
+  </data>
+  <data name="MenuFunctions_RemoveRecord_Are_you_sure_you_want_to_delete_the_selected_Record_" xml:space="preserve">
+    <value>Biztosan törölni kívánja a kiválasztott rekordot?</value>
+  </data>
+  <data name="MenuFunctions_ShippedOrder_Click_Are_you_sure_" xml:space="preserve">
+    <value>Biztos benne?</value>
+  </data>
+  <data name="MenuFunctions_ShippedOrder_Click_Order_already_shipped_" xml:space="preserve">
+    <value>A rendelés már szállítva lett!</value>
+  </data>
+  <data name="MenuFunctions_ShippedOrder_Click_Shipped" xml:space="preserve">
+    <value>Szállítva</value>
+  </data>
+  <data name="MenuFunctions_UpdateStock_Not_enough_stock_for_requested_amount__Current_stock___0_" xml:space="preserve">
+    <value>A kért mennyíség meghaladja a készletet! Készlet: {0}</value>
+  </data>
+  <data name="MenuFunctions_Billing_Click_Client" xml:space="preserve">
+    <value>Partner</value>
+  </data>
+  <data name="MenuFunctions_Billing_Click_Date" xml:space="preserve">
+    <value>Létrehozás dátuma</value>
+  </data>
+  <data name="MenuFunctions_Billing_Click_Invoice_Id" xml:space="preserve">
+    <value>Számla ID</value>
+  </data>
+  <data name="MenuFunctions_MainMenu_Admin" xml:space="preserve">
+    <value>Admin beállítások</value>
+  </data>
+  <data name="MenuFunctions_MainMenu_Billing" xml:space="preserve">
+    <value>Számlázás</value>
+  </data>
+  <data name="MenuFunctions_MainMenu_Data" xml:space="preserve">
+    <value>Adatok</value>
+  </data>
+  <data name="MenuFunctions_MainMenu_Exit" xml:space="preserve">
+    <value>Kilépés</value>
+  </data>
+  <data name="MenuFunctions_MainMenu_File" xml:space="preserve">
+    <value>Fájl</value>
+  </data>
+  <data name="MenuFunctions_MainMenu_Lang" xml:space="preserve">
+    <value>Nyelv választás</value>
+  </data>
+  <data name="MenuFunctions_MainMenu_Orders" xml:space="preserve">
+    <value>Rendelések</value>
+  </data>
+  <data name="MenuFunctions_MainMenu_Partners" xml:space="preserve">
+    <value>Partnertörzs</value>
+  </data>
+  <data name="MenuFunctions_MainMenu_Pass" xml:space="preserve">
+    <value>Jelszó változtatása</value>
+  </data>
+  <data name="MenuFunctions_MainMenu_Products" xml:space="preserve">
+    <value>Terméktörzs</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_PricesCount" xml:space="preserve">
+    <value>Árak száma</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Qty" xml:space="preserve">
+    <value>Mennyíség</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_SKU" xml:space="preserve">
+    <value>Cikkszám</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Stock" xml:space="preserve">
+    <value>Készlet</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Unit" xml:space="preserve">
+    <value>Cs. E.</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_CTN" xml:space="preserve">
+    <value>VTSZ</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Desc" xml:space="preserve">
+    <value>Leírás</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_EAN" xml:space="preserve">
+    <value>EAN</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_EanCount" xml:space="preserve">
+    <value>EAN-ok száma</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_EANs" xml:space="preserve">
+    <value>EAN-ok</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Min" xml:space="preserve">
+    <value>Minimum készlet</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_OrdersCount" xml:space="preserve">
+    <value>Rendelések száma</value>
+  </data>
+  <data name="MenuFunctions_OrderMenu_NotShipped" xml:space="preserve">
+    <value>Nincs szállítva</value>
+  </data>
+  <data name="MenuFunctions_OrderMenu_OderDate" xml:space="preserve">
+    <value>Rendelése dátuma</value>
+  </data>
+  <data name="MenuFunctions_OrderMenu_OrderDetail" xml:space="preserve">
+    <value>Rendelt termékek</value>
+  </data>
+  <data name="MenuFunctions_OrderMenu_OrderID" xml:space="preserve">
+    <value>Rendelés ID</value>
+  </data>
+  <data name="MenuFunctions_OrderMenu_Partner" xml:space="preserve">
+    <value>Partner</value>
+  </data>
+  <data name="MenuFunctions_OrderMenu_PartnerID" xml:space="preserve">
+    <value>Partner ID</value>
+  </data>
+  <data name="MenuFunctions_OrderMenu_ReqDate" xml:space="preserve">
+    <value>Kért kiszállítás dátuma</value>
+  </data>
+  <data name="MenuFunctions_OrderMenu_ShipDate" xml:space="preserve">
+    <value>Kiszállítás dátuma</value>
+  </data>
+  <data name="MenuFunctions_PartnerMenu_Email" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="MenuFunctions_PartnerMenu_InvoiceAddress" xml:space="preserve">
+    <value>Számlázási cím</value>
+  </data>
+  <data name="MenuFunctions_PartnerMenu_Name" xml:space="preserve">
+    <value>Név</value>
+  </data>
+  <data name="MenuFunctions_PartnerMenu_Orders" xml:space="preserve">
+    <value>Rendelések száma</value>
+  </data>
+  <data name="MenuFunctions_PartnerMenu_PartnerId" xml:space="preserve">
+    <value>Partner ID</value>
+  </data>
+  <data name="MenuFunctions_PartnerMenu_PriceCategory" xml:space="preserve">
+    <value>Árkategória</value>
+  </data>
+  <data name="MenuFunctions_PartnerMenu_ShippingAddress" xml:space="preserve">
+    <value>Szállítási cím</value>
+  </data>
+  <data name="MenuFunctions_PartnerMenu_Telephone" xml:space="preserve">
+    <value>Telefonszám</value>
+  </data>
+  <data name="MenuFunctions_PartnerMenu_TIN" xml:space="preserve">
+    <value>Adószám</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Number" xml:space="preserve">
+    <value>Rendelés ID</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Category" xml:space="preserve">
+    <value>Kategória</value>
+  </data>
+  <data name="AdminSettingsFrm_button1_Click_Are_you_sure_" xml:space="preserve">
+    <value>Biztos benne?</value>
+  </data>
+  <data name="AdminSettingsFrm_button1_Click_Confirmation" xml:space="preserve">
+    <value>Ellenörzés</value>
+  </data>
+  <data name="AdminSettingsFrm_button1_Click_Please_fill_every_field_" xml:space="preserve">
+    <value>Kérem töltse ki az összes mezőt!</value>
+  </data>
+  <data name="AdminSettingsFrm_button1_Click_Warning" xml:space="preserve">
+    <value>Figyelmeztetés</value>
+  </data>
+  <data name="AdminSettingsFrm_button3_Click_Delete_selected_user_" xml:space="preserve">
+    <value>Törli a kijelölt felhasználót?</value>
+  </data>
+  <data name="AdminSettingsFrm_checkBox5_CheckedChanged_Cancel" xml:space="preserve">
+    <value>Mégse</value>
+  </data>
+  <data name="AdminSettingsFrm_checkBox5_CheckedChanged_Cancel_editing_" xml:space="preserve">
+    <value>Megszakítja a szerkesztést?</value>
+  </data>
+  <data name="MenuFunctions_Billing_Click_Finish" xml:space="preserve">
+    <value>Kész</value>
+  </data>
+  <data name="MenuFunctions_CreateOrder_Description" xml:space="preserve">
+    <value>Leírás</value>
+  </data>
+  <data name="MenuFunctions_CreateOrder_Price" xml:space="preserve">
+    <value>Ár</value>
+  </data>
+  <data name="MenuFunctions_CreateOrder_PU" xml:space="preserve">
+    <value>Cs. E.</value>
+  </data>
+  <data name="MenuFunctions_CreateOrder_Qty" xml:space="preserve">
+    <value>Mennyíség</value>
+  </data>
+  <data name="MenuFunctions_CreateOrder_SKU" xml:space="preserve">
+    <value>Cikkszám</value>
+  </data>
+  <data name="MenuFunctions_MainMenu_InvoiceSettings" xml:space="preserve">
+    <value>Billingo API Kapcsolat</value>
+  </data>
+  <data name="AdminSettingsFrm_button1_Click_Password_Length" xml:space="preserve">
+    <value>A jelszó hosszúságának 6 és 24 karakter között kell lennie!</value>
+  </data>
+  <data name="AdminSettingsFrm_button1_Click_Figyelmeztetés" xml:space="preserve">
+    <value>Figyelmeztetés</value>
+  </data>
+</root>

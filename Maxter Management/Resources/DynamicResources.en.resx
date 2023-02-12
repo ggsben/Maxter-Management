@@ -1,0 +1,350 @@
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MenuFunctions_UpdateStock_Not_enough_stock_for_requested_amount__Current_stock___0_" xml:space="preserve">
+    <value>Not enough stock for requested amount! Current stock: {0}</value>
+  </data>
+  <data name="MenuFunctions_Billing_Click_Client" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="MenuFunctions_Billing_Click_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="MenuFunctions_Billing_Click_Create_invoice" xml:space="preserve">
+    <value>Create invoice</value>
+  </data>
+  <data name="MenuFunctions_Billing_Click_Date" xml:space="preserve">
+    <value>Date of creation</value>
+  </data>
+  <data name="MenuFunctions_Billing_Click_Download_invoices" xml:space="preserve">
+    <value>Download invoices</value>
+  </data>
+  <data name="MenuFunctions_Billing_Click_Invoice_Id" xml:space="preserve">
+    <value>Invoice ID</value>
+  </data>
+  <data name="MenuFunctions_Billing_Click_Load_invoices" xml:space="preserve">
+    <value>Load invoices</value>
+  </data>
+  <data name="MenuFunctions_LoadInvoices_Click_Invoices_are_not_downloaded__Please_download_invoices_first_" xml:space="preserve">
+    <value>Invoices are not downloaded. Please download invoices first.</value>
+  </data>
+  <data name="MenuFunctions_LoadInvoices_Click_Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="MenuFunctions_Login_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="MenuFunctions_Login_Failed_login_" xml:space="preserve">
+    <value>Failed login!</value>
+  </data>
+  <data name="MenuFunctions_ModifyOrder_Click_Order_ID__" xml:space="preserve">
+    <value>Order ID: </value>
+  </data>
+  <data name="MenuFunctions_ModifyOrder_Click_Partner__" xml:space="preserve">
+    <value>Partner: </value>
+  </data>
+  <data name="MenuFunctions_OrderDgv_CellEndEdit_Requested_amount_exceeds_current_stock__Avaiable_stock___0_" xml:space="preserve">
+    <value>Requested amount exceeds current stock! Avaiable stock: {0}</value>
+  </data>
+  <data name="MenuFunctions_OrderDgv_Desc_" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="MenuFunctions_OrderDgv_KeyDown_Delete_selected_item_" xml:space="preserve">
+    <value>Delete selected item?</value>
+  </data>
+  <data name="MenuFunctions_OrderDgv_Price_" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="MenuFunctions_OrderDgv_Pu_" xml:space="preserve">
+    <value>PU</value>
+  </data>
+  <data name="MenuFunctions_OrderDgv_Qty_" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="MenuFunctions_OrderDgv_Sku_" xml:space="preserve">
+    <value>SKU</value>
+  </data>
+  <data name="MenuFunctions_Orders_Click_Create_order" xml:space="preserve">
+    <value>Create order</value>
+  </data>
+  <data name="MenuFunctions_Orders_Click_Fill_stock" xml:space="preserve">
+    <value>Fill stock</value>
+  </data>
+  <data name="MenuFunctions_Orders_Click_Mark_as_shipped" xml:space="preserve">
+    <value>Mark as shipped</value>
+  </data>
+  <data name="MenuFunctions_Orders_Click_Modify_order" xml:space="preserve">
+    <value>Modify order</value>
+  </data>
+  <data name="MenuFunctions_Orders_Click_Remove_order" xml:space="preserve">
+    <value>Remove order</value>
+  </data>
+  <data name="MenuFunctions_PartnerMenu_Create_partner" xml:space="preserve">
+    <value>Create partner</value>
+  </data>
+  <data name="MenuFunctions_PartnerMenu_Modify_partner" xml:space="preserve">
+    <value>Modify partner</value>
+  </data>
+  <data name="MenuFunctions_PartnerMenu_Remove_partner" xml:space="preserve">
+    <value>Remove partner</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Add_EAN" xml:space="preserve">
+    <value>Add EAN</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Add_Price" xml:space="preserve">
+    <value>Add Price</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Create_new_record" xml:space="preserve">
+    <value>Create new record</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Modify_EAN" xml:space="preserve">
+    <value>Modify EAN</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Modify_Price" xml:space="preserve">
+    <value>Modify Price</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Modify_record" xml:space="preserve">
+    <value>Modify record</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Orders_including_item" xml:space="preserve">
+    <value>Orders including item</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Prices" xml:space="preserve">
+    <value>Prices</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Properties" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Remove_EAN" xml:space="preserve">
+    <value>Remove EAN</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Remove_Price" xml:space="preserve">
+    <value>Remove Price</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Remove_record" xml:space="preserve">
+    <value>Remove record</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Show_EANs" xml:space="preserve">
+    <value>Show EANs</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Show_orders_including_item" xml:space="preserve">
+    <value>Show orders including item</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Show_Prices" xml:space="preserve">
+    <value>Show Prices</value>
+  </data>
+  <data name="MenuFunctions_RemoveEAN_Are_you_sure_you_want_to_delete_the_selected_EAN_" xml:space="preserve">
+    <value>Are you sure you want to delete the selected EAN?</value>
+  </data>
+  <data name="MenuFunctions_RemoveOrder_Click_Are_you_sure_you_want_to_delete_the_selected_Order_" xml:space="preserve">
+    <value>Are you sure you want to delete the selected Order?</value>
+  </data>
+  <data name="MenuFunctions_RemoveOrder_Click_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="MenuFunctions_RemoveOrder_Click_Order_has_already_been_shipped_" xml:space="preserve">
+    <value>Order has already been shipped!</value>
+  </data>
+  <data name="MenuFunctions_RemovePartner_Click_Are_you_sure_you_want_to_delete_the_selected_Partner_" xml:space="preserve">
+    <value>Are you sure you want to delete the selected Partner?</value>
+  </data>
+  <data name="MenuFunctions_RemovePrice_Are_you_sure_you_want_to_delete_the_selected_Price_" xml:space="preserve">
+    <value>Are you sure you want to delete the selected Price?</value>
+  </data>
+  <data name="MenuFunctions_RemoveRecord_Are_you_sure_you_want_to_delete_the_selected_Record_" xml:space="preserve">
+    <value>Are you sure you want to delete the selected Record?</value>
+  </data>
+  <data name="MenuFunctions_ShippedOrder_Click_Are_you_sure_" xml:space="preserve">
+    <value>Are you sure?</value>
+  </data>
+  <data name="MenuFunctions_ShippedOrder_Click_Order_already_shipped_" xml:space="preserve">
+    <value>Order already shipped!</value>
+  </data>
+  <data name="MenuFunctions_ShippedOrder_Click_Shipped" xml:space="preserve">
+    <value>Shipped</value>
+  </data>
+  <data name="MenuFunctions_MainMenu_Admin" xml:space="preserve">
+    <value>Admin settings</value>
+  </data>
+  <data name="MenuFunctions_MainMenu_Billing" xml:space="preserve">
+    <value>Billing</value>
+  </data>
+  <data name="MenuFunctions_MainMenu_Data" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="MenuFunctions_MainMenu_Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="MenuFunctions_MainMenu_File" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="MenuFunctions_MainMenu_Lang" xml:space="preserve">
+    <value>Change language</value>
+  </data>
+  <data name="MenuFunctions_MainMenu_Orders" xml:space="preserve">
+    <value>Orders</value>
+  </data>
+  <data name="MenuFunctions_MainMenu_Partners" xml:space="preserve">
+    <value>Partners</value>
+  </data>
+  <data name="MenuFunctions_MainMenu_Pass" xml:space="preserve">
+    <value>Change password</value>
+  </data>
+  <data name="MenuFunctions_MainMenu_Products" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_PricesCount" xml:space="preserve">
+    <value>Prices count</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Qty" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_SKU" xml:space="preserve">
+    <value>SKU</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Stock" xml:space="preserve">
+    <value>Stock Qty.</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Unit" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_CTN" xml:space="preserve">
+    <value>CTN</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Desc" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_EAN" xml:space="preserve">
+    <value>EAN</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_EanCount" xml:space="preserve">
+    <value>EAN count</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_EANs" xml:space="preserve">
+    <value>EANs</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Min" xml:space="preserve">
+    <value>Min. Stock Qty.</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_OrdersCount" xml:space="preserve">
+    <value>Orders count</value>
+  </data>
+  <data name="MenuFunctions_OrderMenu_NotShipped" xml:space="preserve">
+    <value>Not shipped</value>
+  </data>
+  <data name="MenuFunctions_OrderMenu_OderDate" xml:space="preserve">
+    <value>Order Date</value>
+  </data>
+  <data name="MenuFunctions_OrderMenu_OrderDetail" xml:space="preserve">
+    <value>Order details</value>
+  </data>
+  <data name="MenuFunctions_OrderMenu_OrderID" xml:space="preserve">
+    <value>Order ID</value>
+  </data>
+  <data name="MenuFunctions_OrderMenu_Partner" xml:space="preserve">
+    <value>Partner</value>
+  </data>
+  <data name="MenuFunctions_OrderMenu_PartnerID" xml:space="preserve">
+    <value>Partner ID</value>
+  </data>
+  <data name="MenuFunctions_OrderMenu_ReqDate" xml:space="preserve">
+    <value>Required Date</value>
+  </data>
+  <data name="MenuFunctions_OrderMenu_ShipDate" xml:space="preserve">
+    <value>Shipped Date</value>
+  </data>
+  <data name="MenuFunctions_PartnerMenu_Email" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="MenuFunctions_PartnerMenu_InvoiceAddress" xml:space="preserve">
+    <value>Invoice Address</value>
+  </data>
+  <data name="MenuFunctions_PartnerMenu_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="MenuFunctions_PartnerMenu_Orders" xml:space="preserve">
+    <value>Orders</value>
+  </data>
+  <data name="MenuFunctions_PartnerMenu_PartnerId" xml:space="preserve">
+    <value>Partner ID</value>
+  </data>
+  <data name="MenuFunctions_PartnerMenu_PriceCategory" xml:space="preserve">
+    <value>Price Category</value>
+  </data>
+  <data name="MenuFunctions_PartnerMenu_ShippingAddress" xml:space="preserve">
+    <value>Shipping Address</value>
+  </data>
+  <data name="MenuFunctions_PartnerMenu_Telephone" xml:space="preserve">
+    <value>Telephone Number</value>
+  </data>
+  <data name="MenuFunctions_PartnerMenu_TIN" xml:space="preserve">
+    <value>TIN</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Number" xml:space="preserve">
+    <value>Order ID</value>
+  </data>
+  <data name="MenuFunctions_ProductMenu_Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="AdminSettingsFrm_button1_Click_Are_you_sure_" xml:space="preserve">
+    <value>Are you sure?</value>
+  </data>
+  <data name="AdminSettingsFrm_button1_Click_Confirmation" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="AdminSettingsFrm_button1_Click_Please_fill_every_field_" xml:space="preserve">
+    <value>Please fill every field!</value>
+  </data>
+  <data name="AdminSettingsFrm_button1_Click_Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="AdminSettingsFrm_button3_Click_Delete_selected_user_" xml:space="preserve">
+    <value>Delete selected user?</value>
+  </data>
+  <data name="AdminSettingsFrm_checkBox5_CheckedChanged_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="AdminSettingsFrm_checkBox5_CheckedChanged_Cancel_editing_" xml:space="preserve">
+    <value>Cancel editing?</value>
+  </data>
+  <data name="MenuFunctions_Billing_Click_Finish" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="MenuFunctions_CreateOrder_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="MenuFunctions_CreateOrder_Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="MenuFunctions_CreateOrder_PU" xml:space="preserve">
+    <value>PU</value>
+  </data>
+  <data name="MenuFunctions_CreateOrder_Qty" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="MenuFunctions_CreateOrder_SKU" xml:space="preserve">
+    <value>SKU</value>
+  </data>
+  <data name="MenuFunctions_MainMenu_InvoiceSettings" xml:space="preserve">
+    <value>Billingo API Connection</value>
+  </data>
+  <data name="AdminSettingsFrm_button1_Click_Password_Length" xml:space="preserve">
+    <value>Password length must be between 6 and 24 characters!</value>
+  </data>
+  <data name="AdminSettingsFrm_button1_Click_Figyelmeztetés" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+</root>
